@@ -23,9 +23,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ----------------------------------------------------------------------
 # Download the tools using curl
 RUN curl -L -o EvtxECmd.zip https://download.ericzimmermanstools.com/net9/EvtxECmd.zip
+RUN curl -L -o MFTECmd.zip https://download.ericzimmermanstools.com/net9/MFTECmd.zip
 
 # Unzip and clean up
 RUN unzip EvtxECmd.zip -d /opt/zimmermantools && rm EvtxECmd.zip
+RUN mkdir /opt/zimmermantools/MFTECmd
+RUN unzip MFTECmd.zip -d /opt/zimmermantools/MFTECmd && rm MFTECmd.zip
 
 # Sync EvtxECmd map files
 RUN dotnet /opt/zimmermantools/EvtxeCmd/EvtxECmd.dll --sync
