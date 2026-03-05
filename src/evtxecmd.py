@@ -10,7 +10,7 @@ from openrelik_worker_common.task_utils import create_task_result, get_input_fil
 
 from .app import celery
 
-TASK_NAME = "openrelik-worker-zimmermantools.tasks.evtxecmd"
+TASK_NAME = "openrelik-worker-eztools.tasks.evtxecmd"
 
 TASK_METADATA = {
     "display_name": "EvtxECmd JSON output",
