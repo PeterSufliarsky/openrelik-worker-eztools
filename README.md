@@ -5,6 +5,7 @@ This worker can be used to parse input files using forensic tools created by Eri
 
 Currently supported tools:
 * EvtxECmd
+* MFTECmd
 
 ## Deploy
 Add the below configuration to the OpenRelik docker-compose.yml file.
